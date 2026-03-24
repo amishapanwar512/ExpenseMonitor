@@ -895,10 +895,17 @@
     });
 
     // Budget modal
-    dom.budgetBtn.addEventListener('click', () => {
+    function openBudgetModal() {
       dom.budgetInput.value = budget || '';
       openModal(dom.budgetOverlay);
       setTimeout(() => dom.budgetInput.focus(), 350);
+    }
+
+    dom.budgetBtn.addEventListener('click', openBudgetModal);
+
+    // Also allow clicking the "set budget" badge
+    dom.remainingBadge.addEventListener('click', () => {
+      if (budget === 0) openBudgetModal();
     });
 
     dom.budgetForm.addEventListener('submit', (e) => {

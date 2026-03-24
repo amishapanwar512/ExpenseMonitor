@@ -572,6 +572,25 @@ body>* {
   color: var(--text);
 }
 
+.card-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+
+#remaining-badge:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
 .center-sub {
   font-size: 0.68rem;
   color: var(--text-muted);
